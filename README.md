@@ -1,2 +1,0 @@
-# zevcrack
-Advanced hash cracker
