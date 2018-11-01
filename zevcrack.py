@@ -169,7 +169,6 @@ if __name__ == "__main__":
     arg = parse.parse_args()
 
     try:
-        print (f" {__description__} v{__version__}: {__github__}")
         if arg.version: print (f'{__version__}');exit()
         if arg.string: hashing();exit()
         if arg.show:
@@ -181,7 +180,7 @@ if __name__ == "__main__":
             print ("\n** Do not include the * in mysql41 hashes. **\n");exit() # new line and exit
 
         if arg.hash or arg.file:
-            print ("") # new line
+            print (f" {__description__} v{__version__}: {__github__}\n")
             hashes = [i.strip() for i in open(arg.file,"r").readlines()] if arg.file else [arg.hash]
             if arg.verbose: tampil(f"Begin executing: {time.strftime('%c')}")
             if arg.output: tampil(f"Session file: {arg.output}")
